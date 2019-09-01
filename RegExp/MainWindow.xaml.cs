@@ -26,9 +26,9 @@ namespace RegExp
         private string phone;
         private string email;
 
-        private string nameRegex = @"^((\w{1,}-*\w{1,})\s{1}){1,2}(\w{1,}-*\w{1,})$";
-        private string phoneRegex = @"";
-        private string emailRegex = @"";
+        public static string nameRegex = @"^((\w{1,}-*\w{1,}\.*)\s{1}){1,2}\w{1,}-*\w{1,}$";
+        public static string phoneRegex = @"";
+        public static string emailRegex = @"";
 
         public MainWindow()
         {
@@ -36,39 +36,38 @@ namespace RegExp
             DataContext = this;
         }
 
-        private bool CheckNameRegexValidity()
+        public static bool CheckNameRegexValidity(string nameString, string regexString)
         {
-            name = txtName.Text;
-            return Regex.IsMatch(name, nameRegex);
+            return Regex.IsMatch(nameString, regexString);
         }
 
-        private bool CheckPhoneRegexValidity()
+        public static bool CheckPhoneRegexValidity(string nameString, string regexString)
         {
-            phone = txtPhone.Text;
-            return Regex.IsMatch(phone, phoneRegex);
+            return Regex.IsMatch(nameString, regexString);
         }
 
-        private bool CheckEmailRegexValidity()
+        public static bool CheckEmailRegexValidity(string nameString, string regexString)
         {
-            email = txtEmail.Text;
-            return Regex.IsMatch(email, emailRegex);
+            return Regex.IsMatch(nameString, regexString);
         }
 
         private void BtnSave_Click(object sender, RoutedEventArgs e)
         {
-            if (!CheckNameRegexValidity())
+            if (!CheckNameRegexValidity(txtName.Text, nameRegex))
             {
                 MessageBox.Show("Name doesn't match with its regular expression");
             }
-            if (!CheckPhoneRegexValidity())
+            if (!CheckPhoneRegexValidity(txtPhone.Text, phoneRegex))
             {
                 MessageBox.Show("Phone number doesn't match with its regular expression");
             }
-            if (!CheckEmailRegexValidity())
+            if (!CheckEmailRegexValidity(txtEmail.Text, emailRegex))
             {
                 MessageBox.Show("E-mail address doesn't match with its regular expression");
             }
-            else if (CheckNameRegexValidity() && CheckPhoneRegexValidity() && CheckEmailRegexValidity())
+            else if (CheckNameRegexValidity(txtName.Text, nameRegex) 
+                && CheckPhoneRegexValidity(txtPhone.Text, phoneRegex) 
+                && CheckEmailRegexValidity(txtEmail.Text, emailRegex))
             {
                 MessageBox.Show("Congratulation, all fields match");
             }
