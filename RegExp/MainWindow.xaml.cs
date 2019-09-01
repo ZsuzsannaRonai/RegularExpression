@@ -72,5 +72,32 @@ namespace RegExp
                 MessageBox.Show("Congratulation, all fields match");
             }
         }
+
+        public static string phonePattern = @"^\(?(\d{3})\)?[\s\-]?(\d{3})\-?(\d{4})$";
+        public static string phonePatternFix = @"^\((\d{3})\)[\s](\d{3})\-(\d{4})$";
+
+        private void BtnReformat_Click(object sender, RoutedEventArgs e)
+        {
+            
+
+            if (Regex.IsMatch(refPhone.Text, phonePatternFix))
+            {
+                resPhone.Text = "no reformatting needed";
+            }
+            else if (Regex.IsMatch(refPhone.Text, phonePattern))
+            {
+                string reformattedPhone = ReformatPhone(refPhone.Text);
+                resPhone.Text = reformattedPhone;
+            }
+            else
+            {
+                resPhone.Text = "reformatting not possible";
+            }
+        }
+
+        public string ReformatPhone(string phoneString)
+        {
+            return Regex.Replace(phoneString, phonePattern, phonePatternFix);
+        }
     }
 }

@@ -5,20 +5,29 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RegExp"
         mc:Ignorable="d"
-        Title="Input validation" Height="220" Width="400">
+        Title="Input validation" Height="400" Width="400">
     <StackPanel>
         <DockPanel Margin="10 10">
             <Label Content="Name" />
-            <TextBox x:Name="txtName" Width="250" Padding="5 5" />
+            <TextBox x:Name="txtName" Width="250" Padding="5 5" HorizontalAlignment="Right" />
         </DockPanel>
         <DockPanel Margin="10 10">
             <Label Content="Phone" />
-            <TextBox x:Name="txtPhone" Width="250" Padding="5 5" />
+            <TextBox x:Name="txtPhone" Width="250" Padding="5 5" HorizontalAlignment="Right" />
         </DockPanel>
         <DockPanel Margin="10 10">
             <Label Content="E-mail" />
-            <TextBox x:Name="txtEmail" Width="250" Padding="5 5" />
+            <TextBox x:Name="txtEmail" Width="250" Padding="5 5" HorizontalAlignment="Right" />
         </DockPanel>
-        <Button x:Name="btnSave" Content="Save" HorizontalAlignment="Right" Width="40" Margin="0 10 30 20" Click="BtnSave_Click"/>
+        <Button x:Name="btnSave" Content="Save" HorizontalAlignment="Right" Width="80" Margin="0 10 30 10" Click="BtnSave_Click"/>
+        <DockPanel Margin="10 10">
+            <Label Content="Phone in" />
+            <TextBox x:Name="refPhone" Width="250" Padding="5 5" HorizontalAlignment="Right" />
+        </DockPanel>
+        <Button x:Name="btnReformat" Content="Reformat" HorizontalAlignment="Right" Width="80" Margin="0 10 30 10" Click="BtnReformat_Click"/>
+        <DockPanel Margin="10 10">
+            <Label Content="Phone out" />
+            <TextBox x:Name="resPhone" Width="250" Padding="5 5" HorizontalAlignment="Right" />
+        </DockPanel>
     </StackPanel>
 </Window>
