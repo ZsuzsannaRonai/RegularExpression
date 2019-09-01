@@ -52,6 +52,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="UnitTestEmail.cs" />
     <Compile Include="UnitTestPhone.cs" />
     <Compile Include="UnitTestName.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
