@@ -27,7 +27,7 @@ namespace RegExp
         private string email;
 
         public static string nameRegex = @"^((\w{1,}-*\w{1,}\.*)\s{1}){1,2}\w{1,}-*\w{1,}$";
-        public static string phoneRegex = @"";
+        public static string phoneRegex = @"^\+*\d{1,5}/{1}\d{5,9}$";
         public static string emailRegex = @"";
 
         public MainWindow()
