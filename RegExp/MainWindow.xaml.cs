@@ -26,7 +26,7 @@ namespace RegExp
         private string phone;
         private string email;
 
-        private string nameRegex = @"";
+        private string nameRegex = @"^((\w{1,}-*\w{1,})\s{1}){1,2}(\w{1,}-*\w{1,})$";
         private string phoneRegex = @"";
         private string emailRegex = @"";
 
@@ -34,24 +34,23 @@ namespace RegExp
         {
             InitializeComponent();
             DataContext = this;
-
-            name = txtName.Text;
-            phone = txtPhone.Text;
-            email = txtEmail.Text;
         }
 
         private bool CheckNameRegexValidity()
         {
+            name = txtName.Text;
             return Regex.IsMatch(name, nameRegex);
         }
 
         private bool CheckPhoneRegexValidity()
         {
+            phone = txtPhone.Text;
             return Regex.IsMatch(phone, phoneRegex);
         }
 
         private bool CheckEmailRegexValidity()
         {
+            email = txtEmail.Text;
             return Regex.IsMatch(email, emailRegex);
         }
 
