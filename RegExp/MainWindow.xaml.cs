@@ -97,7 +97,8 @@ namespace RegExp
 
         public string ReformatPhone(string phoneString)
         {
-            return Regex.Replace(phoneString, phonePattern, phonePatternFix);
+
+            return Regex.Replace(phoneString, @"^\d{3}", @"");
         }
     }
 }
