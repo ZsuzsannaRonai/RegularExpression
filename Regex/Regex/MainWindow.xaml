@@ -9,17 +9,17 @@
     <StackPanel>
         <DockPanel Margin="0 15">
             <Label Content="Name" />
-            <TextBox Width="300">
+            <TextBox Width="300" Padding="5">
             </TextBox>
         </DockPanel>
         <DockPanel Margin="0 15">
             <Label Content="Phone" />
-            <TextBox Width="300">
+            <TextBox Width="300" Padding="5">
             </TextBox>
         </DockPanel>
         <DockPanel Margin="0 15">
             <Label Content="E-mail" />
-            <TextBox Width="300">
+            <TextBox Width="300" Padding="5">
             </TextBox>
         </DockPanel>
             <Button Content="Save" Width="80" Margin="0 5 60 20" HorizontalAlignment="Right" />
