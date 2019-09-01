@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{42ED22B4-40FC-4303-B02A-72F8F6242916}</ProjectGuid>
+    <ProjectGuid>{3983B5DA-DC89-40E9-829B-61F125917A11}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Regex</RootNamespace>
-    <AssemblyName>Regex</AssemblyName>
+    <RootNamespace>RegExp</RootNamespace>
+    <AssemblyName>RegExp</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>

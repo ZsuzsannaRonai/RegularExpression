@@ -1,7 +1,7 @@
-﻿<Application x:Class="Regex.App"
+﻿<Application x:Class="RegExp.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:Regex"
+             xmlns:local="clr-namespace:RegExp"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
          
